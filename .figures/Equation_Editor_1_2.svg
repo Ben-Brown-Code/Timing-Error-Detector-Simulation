@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="347.696" height="35.616" viewBox="0 0 347.696 35.616">
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-24.713" x="82.048">e</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-24.713" x="87.298999">[</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-24.713" x="90.06699">n</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-24.713" x="96.047 101.5862">]=</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-24.713" x="112.098 117.50769 123.07678">val</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-23.217999" x="126.26 129.82361 134.53093">cur</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-24.713" x="141.156">&#x00b7;</tspan></text>
+<path transform="matrix(1,0,0,-1,146.137,5.0810015)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H20.113"/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-24.713" x="146.137 150.66002 156.70732">sym</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-22.276999" x="166.25099 170.35857 174.27088 178.05068">prev</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-24.713" x="184.99799">&#x2212;</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-24.713" x="194.96099 199.48401 205.53131">sym</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-22.276999" x="215.07399 218.6376 223.34493">cur</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-24.713" x="229.971">&#x00b7;</tspan></text>
+<path transform="matrix(1,0,0,-1,234.952,2.5900002)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H14.162"/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-24.713" x="234.952 240.3617 245.93079">val</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-23.217999" x="249.114 253.22158 257.13389 260.91368">prev</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-24.713" x="332.974 336.84947 341.83076">(1)</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-4.483" x="45.945985">e</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="51.196985">[</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-4.483" x="53.96398">n</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="59.94398 65.483188 76.003688 83.33616">]=Re</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-4.483" x="87.75698">{</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-4.483" x="92.73798">y</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="98.943988">[</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-4.483" x="101.71098 107.688549">nT</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-2.9889999" x="113.512989">s</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="119.984989">+</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-4.483" x="129.94799">&#x03c4;</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="135.43099">]</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-4.483" x="140.41199">&#x00b7;</tspan></text>
+<path transform="matrix(1,0,0,-1,145.393,22.266)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H43.272"/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-4.483" x="145.393">s</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="149.912">[</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-4.483" x="152.68001 158.65756">nT</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-2.9889999" x="164.48201">s</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-4.483" x="170.95401">&#x2212;</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="180.91602 185.89731">1]</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-4.483" x="190.87902">&#x2212;</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-4.483" x="200.84201">s</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="205.36101">[</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-4.483" x="208.128 214.10556">nT</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-2.9889999" x="219.93001">s</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="224.188">]</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-4.483" x="229.17">&#x00b7;</tspan></text>
+<path transform="matrix(1,0,0,-1,234.151,22.266)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H62.618"/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-4.483" x="234.151">y</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="240.357">[</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-4.483" x="243.124 249.10155">nT</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-2.9889999" x="254.926">s</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-4.483" x="261.398">&#x2212;</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="271.36103 278.55403">1+</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-4.483" x="288.519">&#x03c4;</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="294.002">]</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMSY10" font-style="italic"><tspan y="-4.483" x="296.769">}</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 35.616)" font-size="9.9626" font-family="CMR10"><tspan y="-4.483" x="332.974 336.84947 341.83076">(2)</tspan></text>
+</svg>

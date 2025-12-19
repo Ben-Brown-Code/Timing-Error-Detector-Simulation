@@ -8,18 +8,18 @@ from TimingErrorDetector import TimingErrorDetector
 seed = 3
 np.random.seed(seed) # Reproducibility
 
-SINGLE_RUN = False
+SINGLE_RUN = True
 SINGLE_RUN_METHOD = 'mueller'
 SINGLE_RUN_SNR = 15
 
-COMPARE_RUN = False
+COMPARE_RUN = True
 MIN_SNR = 1
 MAX_SNR = 30
 SNR_STEP = 1
 
-SAVE_DATA = False
+SAVE_DATA = True
 LOAD_DATA = False
-COMPARE_PLOT = False
+COMPARE_PLOT = True
 
 num_symbols = 100000
 sps = 8 # samples per symbol
@@ -105,11 +105,11 @@ if SAVE_DATA:
                     'final_offset': method_final_offset
                     }
 
-    with open("./TED Simulator/results_dict.pkl", "wb") as f:
+    with open("./results_dict.pkl", "wb") as f:
         pickle.dump(results_dict, f)
 
 if LOAD_DATA:
-    with open("./TED Simulator/results_dict.pkl", "rb") as f:
+    with open("./results_dict.pkl", "rb") as f:
         results_dict = pickle.load(f)
     method_ber = results_dict['ber']
     snr_test = results_dict['parameters']['snr']
