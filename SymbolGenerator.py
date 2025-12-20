@@ -44,6 +44,7 @@ class SymbolGenerator:
             axs.set_ylabel('Symbol/Bit Value')
             axs.legend()
             axs.set_title('Symbols Pulse Train with Corresponding Bits')
+            axs.grid(True)
         else:
             plt.figure()
             plt.plot(self.pulse_stream[start_idx:end_idx], '.-', label='Pulses')
@@ -55,4 +56,5 @@ class SymbolGenerator:
             plt.ylabel('Symbol/Bit Value')
             plt.legend()
             plt.title('Symbols Pulse Train with Corresponding Bits')
+            plt.grid(True)
 

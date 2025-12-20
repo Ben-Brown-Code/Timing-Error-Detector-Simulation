@@ -161,6 +161,7 @@ class TimingErrorDetector:
             axs.set_ylabel('Pulse Amplitude')
             axs.legend()
             axs.set_title('Upsampled Pulse Shaped Symbols')
+            axs.grid(True)
         else:
             plt.figure()
 
@@ -182,6 +183,7 @@ class TimingErrorDetector:
         plt.ylabel('Pulse Amplitude')
         plt.legend()
         plt.title('Upsampled Pulse Shaped Symbols')
+        plt.grid(True)
     
     def plot_final_constellation(self, error_eq: str, keep_all: bool = True, axs = None):
         # Visualize I/Q constellation across TED iterations
@@ -209,6 +211,7 @@ class TimingErrorDetector:
             axs.set_xlim((np.real(self.out_signal).min() - 0.2, np.real(self.out_signal).max() + 0.2))
             axs.set_ylim((np.imag(self.out_signal).min() - 0.2, np.imag(self.out_signal).max() + 0.2))
             axs.set_title(title)
+            axs.grid(True)
         else:
             plt.figure()
 
@@ -225,6 +228,7 @@ class TimingErrorDetector:
             plt.xlim((np.real(self.out_signal).min() - 0.2, np.real(self.out_signal).max() + 0.2))
             plt.ylim((np.imag(self.out_signal).min() - 0.2, np.imag(self.out_signal).max() + 0.2))
             plt.title(title)
+            plt.grid(True)
 
     def plot_offset(self, error_eq: str, sps: int, start_idx: int | None = None, end_idx: int | None = None, axs = None):
         # Visualize offset value per iteration
@@ -252,6 +256,7 @@ class TimingErrorDetector:
             axs.set_ylim((0,sps))
             axs.legend()
             axs.set_title(title)
+            axs.grid(True)
         else:
             plt.figure()
             plt.plot(self.offset[start_idx:end_idx], '.', label='Offset')
@@ -260,4 +265,5 @@ class TimingErrorDetector:
             plt.ylim((0,sps))
             plt.legend()
             plt.title(title)
+            plt.grid(True)
 

@@ -89,6 +89,7 @@ class PulseShaper:
             axs.set_ylabel('Amplitude')
             axs.legend()
             axs.set_title('Raised Cosine Filter')
+            axs.grid(True)
         else:
             plt.figure()
             plt.plot(self.raised_cosine, '.', label='RC')
@@ -97,6 +98,7 @@ class PulseShaper:
             plt.ylabel('Amplitude')
             plt.legend()
             plt.title('Raised Cosine Filter')
+            plt.grid(True)
     
     def plot_pulse_shaped(self, start_idx: int | None = None, end_idx: int | None = None, axs = None):
         # Visualize shaped pulses
@@ -115,6 +117,7 @@ class PulseShaper:
             axs.legend()
             axs.set_ylim((np.min(self.pulse_shaped[start_idx:end_idx]) - 0.2, np.max(self.pulse_shaped[start_idx:end_idx]) + 0.2))
             axs.set_title('Symbols after Pulse Shaping with RC')
+            axs.grid(True)
         else:
             plt.figure()
             plt.plot(self.pulse_shaped[start_idx:end_idx], '.-', label='Pulse Shaped')
@@ -123,6 +126,7 @@ class PulseShaper:
             plt.legend()
             plt.ylim((np.min(self.pulse_shaped[start_idx:end_idx]) - 0.5, np.max(self.pulse_shaped[start_idx:end_idx]) + 0.5))
             plt.title('Symbols after Pulse Shaping with RC')
+            plt.grid(True)
 
     def plot_pulse_delayed(self, start_idx: int | None = None, end_idx: int | None = None, with_original: bool = False, axs = None):
         # Visualize shaped pulses
@@ -144,6 +148,7 @@ class PulseShaper:
             axs.legend()
             axs.set_ylim((np.min(self.pulse_shaped_delayed[start_idx:end_idx]) - 0.5, np.max(self.pulse_shaped_delayed[start_idx:end_idx]) + 0.5))
             axs.set_title('Fractional Delayed Pulse Shaped Symbols')
+            axs.grid(True)
         else:
             plt.figure()
             plt.plot(self.pulse_shaped_delayed[start_idx:end_idx], '.-', label='Delayed Pulse')
@@ -154,6 +159,7 @@ class PulseShaper:
             plt.legend()
             plt.ylim((np.min(self.pulse_shaped_delayed[start_idx:end_idx]) - 0.5, np.max(self.pulse_shaped_delayed[start_idx:end_idx]) + 0.5))
             plt.title('Fractional Delayed Pulse Shaped Symbols')
+            plt.grid(True)
     
     def plot_pulse_noisy(self, start_idx: int | None = None, end_idx: int | None = None, with_delayed: bool = False, is_complex: bool = False, axs = None):
         # Visualize noisy pulses
@@ -182,6 +188,7 @@ class PulseShaper:
             axs.legend()
             axs.set_ylim((np.min(self.pulse_shaped_delayed_noise[start_idx:end_idx].real) - 0.5, np.max(self.pulse_shaped_delayed_noise[start_idx:end_idx].real) + 0.5))
             axs.set_title('Noisy Delayed Pulse Shaped Symbols')
+            axs.grid(True)
         else:
             plt.figure()
 
@@ -199,3 +206,4 @@ class PulseShaper:
             plt.legend()
             plt.ylim((np.min(self.pulse_shaped_delayed_noise[start_idx:end_idx].real) - 0.5, np.max(self.pulse_shaped_delayed_noise[start_idx:end_idx].real) + 0.5))
             plt.title('Noisy Delayed Pulse Shaped Symbols')
+            plt.grid(True)

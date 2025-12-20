@@ -8,14 +8,14 @@ from TimingErrorDetector import TimingErrorDetector
 seed = 3
 np.random.seed(seed) # Reproducibility
 
-SINGLE_RUN = True
+SINGLE_RUN = False
 SINGLE_RUN_METHOD = 'mueller'
 SINGLE_RUN_SNR = 15
 
 COMPARE_RUN = True
 MIN_SNR = 1
 MAX_SNR = 30
-SNR_STEP = 1
+SNR_STEP = 0.5
 
 SAVE_DATA = True
 LOAD_DATA = False
