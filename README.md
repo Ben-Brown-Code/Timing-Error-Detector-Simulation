@@ -57,3 +57,9 @@ The number of symbols is set to 100000 at 8 samples per symbol, so the plots abo
 
 Referring back to the grid of plots, the result of the convolution is the top right plot. This is the ideal signal to be transmitted. After receiving this signal, there would be some delay and noise included. The bottom left plot shows the signal delayed by `int_delay + frac_delay` compared against the original unshifted signal. Then, the final plot shows the signal after AWGN was included. The AWGN added in was complex, so the signal now has a real and imaginary component. This delayed and noisy complex signal is the starting point for the TED loop.
 
+## Results
+This section presents the results of the single run mode, discussed in the Simulation section, as well as results of running the compare run mode. All modes are running off the same example previously presented. Prior to running the timing detector, the noisy delayed signal was upsampled by a factor of 32, meaning there are now 32 x 8 = 256 samples per symbol. The following figure shows a portion of this interpolated signal along with the original samples it was upsampled from.
+
+![Figure](figures/UpsampledPulseShapedSymbols.png)
+
+
