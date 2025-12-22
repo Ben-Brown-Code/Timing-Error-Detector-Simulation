@@ -32,7 +32,7 @@ The final TED used is the Early-Late Gate method shown in EQ (5) and EQ (6).
 
 This introduces a new term $\delta$ which is some small shift usually around *T<sub>s</sub>*/4 or *T<sub>s</sub>*/8. EQ (5) and EQ (6) are equal, and the values being either early or late are with respect to some current value of interest.
 
-For all the TED, **e**[*n*] is the error value computed which is then used to update the offset in the Phase-Locked Loop (PLL). This code provides two options for this update. The first is a proportional-only update which just scales the error and sums to the offset. This is represented in EQ (7). EQ (8) is the second method known as the proportional integral (PI) method which maintains the immediate proportional update of EQ (7) but adds in an accumulated (or integral) error term.
+For all the TED, **e**[*n*] is the error value computed which is then used to update the offset in the Phase-Locked Loop (PLL). The code provides two options for this update. The first is a proportional-only update which just scales the error and sums to the offset. This is represented in EQ (7). EQ (8) is the second method known as the proportional integral (PI) method which maintains the immediate proportional update of EQ (7) but adds in an accumulated (or integral) error term.
 
 <div align="center">
   <img src="figures/OffsetEq.png">
@@ -43,7 +43,7 @@ To clarify, *K<sub>p</sub>* is the proportional gain and *K<sub>i</sub>* is the 
 ## Simulation
 There are two modes that can be ran in the simulation from `testbench.py`: single run, and compare run. Single run mode will generate one BPSK signal and perform the TED loop for one specified method. This is controlled by `SINGLE_RUN` and `SINGLE_RUN_METHOD`. Compare run will generate one BPSK signal, but perform the TED loop for all methods across a range of SNR. This is controlled by `COMPARE_RUN`, `MIN_SNR`, `MAX_SNR`, and `SNR_STEP`. Furthermore, if you want to save or load the results of the compare run, you can use `SAVE_DATA` and `LOAD_DATA`, respectively.
 
-Here, I will walk through a single run using the M&M TED to demonstrate the simulation process. So, I set `SINGLE_RUN = False`, `SINGLE_RUN_METHOD = 'mueller'`,  `SINGLE_RUN_SNR = 15`, and the parameters as follows:
+Here, I will walk through a single run using the M&M TED to demonstrate the simulation process. So, I set `SINGLE_RUN = True`, `SINGLE_RUN_METHOD = 'mueller'`,  `SINGLE_RUN_SNR = 15`, and the parameters as follows:
 ```
 num_symbols = 100000
 sps = 8 # samples per symbol
@@ -55,13 +55,13 @@ sinc_taps = 21
 upsample = 32
 is_complex = True
 ```
-The following figures provide a visualisation for the major process performed. This includes creating the symbol pulse train, pulse shaped, delayed, and noisy signals. Since the modulation is BPSK, the symbols are {-1,+1} which corresponds to binary 0 and binary 1, respectively. After a random binary sequence with 100000 bits is generated, the following figure works chronologically through the pulse shaping steps.
+The following figures provide a visualisation for the major processes performed. This includes creating the symbol pulse train, pulse shaping, delaying, and noise addition. Since the modulation is BPSK, the symbols are {-1,+1} which corresponds to binary 0 and binary 1, respectively. After a random binary sequence with 100000 bits is generated, the following figure works chronologically through the pulse shaping steps.
 
 <div align="center">
   <img src="figures/PulseShapingProcess.png">
 </div>
 
-The number of symbols is set to 100000 at 8 samples per symbol, so the plots above are zoomed in as shown by the x-axis in samples. From the binary sequence, the symbol pulse train can be created with the appropriate samples per symbol. The corresponding bits were also marked. To pulse shape the symbols, I convolved the pulse train with a raised cosine (RC), which would be similar to the process of matched filtering with two root raised cosines. The following figure visualizes the RC curve, along with the zero crossing marked.
+The number of symbols is set to 100000 at 8 samples per symbol, so the plots above are zoomed in as shown by the x-axis in samples. From the binary sequence, the symbol pulse train can be created with the appropriate samples per symbol. The corresponding bits were also marked. To pulse shape the symbols, I convolved the pulse train with a raised cosine (RC), which would be similar to the process of matched filtering with two root raised cosines. The following figure visualizes the RC curve, along with the zero crossings marked.
 
 <div align="center">
   <img src="figures/RaisedCosineFilter.png">
@@ -76,19 +76,19 @@ This section presents the results of the single run mode, discussed in the Simul
   <img src="figures/UpsampledPulseShapedSymbols.png">
 </div>
 
-For the single run mode, the selected TED was M&M with the proportional only PLL update. The default value for the proportional only gain is *K<sub>p</sub>* = 0.1. The following figure shows the offset $\tau$ converging over the TED iterations.
+For the single run mode, the selected TED was M&M with the proportional only PLL update. The default value for the proportional only gain was *K<sub>p</sub>* = 0.1. The following figure shows the offset $\tau$ converging over the TED iterations.
 
 <div align="center">
   <img src="figures/OffsetConvergenceMueller.png">
 </div>
 
-The plot shows $\tau$ converging to 5.7 samples, which is the correct offset since `int_delay = 5` and `frac_delay = 0.7`. The offset convergence confirms the TED using M&M operated correctly. We can further visualize the timing correction through an I/Q constellation. Since the received signal is digitally modulated for BPSK with no frequency offset and symbols {-1,+1}, the expectation will be two clusters around I = +1 and I = -1.
+The plot shows $\tau$ converging to an average of 5.7 samples, which is the correct offset since `int_delay = 5` and `frac_delay = 0.7`. The offset convergence confirms the TED using M&M operated correctly. We can further visualize the timing correction through an I/Q constellation. Since the received signal is digitally modulated for BPSK with no frequency offset and symbols {-1,+1}, the expectation will be two clusters around I = +1 and I = -1.
 
 <div align="center">
   <img src="figures/IQConstellationMueller.png">
 </div>
 
-At a SNR of 15 dB, the TED recovered a perfect I/Q constellation separation between the BPSK symbols. Furthermore, in the line `SingleTED.plot_final_constellation(SINGLE_RUN_METHOD, keep_all=False)` which plots the constellation, the `keep_all=False` discards the first 30 samples values. This simulates the concept of a bit stream preamble which is usually a pattern of starts bits that are used to calibrate the offset prior to the information bits being sampled.
+At a SNR of 15 dB, the TED recovered a perfect I/Q constellation separation between the BPSK symbols. Furthermore, in the line `SingleTED.plot_final_constellation(SINGLE_RUN_METHOD, keep_all=False)` which plots the constellation, the `keep_all=False` discards the first 30 sample values. This simulates the concept of a bit stream preamble which is usually a pattern of starts bits that are used to calibrate the offset prior to the information bits being sampled.
 
 Pivoting to the compare run mode, all three TED were used to recover the timing offset across a range of SNR `MIN_SNR = 1` to `MAX_SNR = 30`. The `keep_all=False` discarded the preamble 30 sampled values, and the BER for each TED and SNR was calculated as shown in the figure below.
 
@@ -96,4 +96,14 @@ Pivoting to the compare run mode, all three TED were used to recover the timing 
   <img src="figures/BERvsSNR.png">
 </div>
 
-All TED covnerge to around 0% BER by SNR = 10 dB. The M&M method is the most robust to noise, followed by Gardner, then followed by Early-Late Gate. M&M is most likely the best performer because it is the only decision-directed method of these three. Therefore, if the TED can be decision directed, these results suggest that method would be better informed. Otherwise, if the method is NDA, then it is better to sample values spaced further apart (such as in Gardner) as opposed to spaced locally (such as in Early-Late Gate).
+## Conclusion
+All TED converge to 0% BER by SNR = 10 dB. The M&M method is the most robust to noise, followed by Gardner, then followed by Early-Late Gate. M&M is most likely the best performer because it is the only decision-directed method of these three. Therefore, if the TED can be decision directed, these results suggest such a method would be better informed. Otherwise, if the method is NDA, then it is better to sample values spaced further apart (such as in Gardner) as opposed to spaced locally (such as in Early-Late Gate).
+
+## References
+PySDR:
+- https://pysdr.org/
+
+Wireless Pi
+- Mueller and Muller: https://wirelesspi.com/mueller-and-muller-timing-synchronization-algorithm/
+- Gardner: https://wirelesspi.com/gardner-timing-error-detector-a-non-data-aided-version-of-zero-crossing-timing-error-detectors/
+- Early-Late Gate: https://wirelesspi.com/early-late-bit-synchronizer-in-digital-communication/
